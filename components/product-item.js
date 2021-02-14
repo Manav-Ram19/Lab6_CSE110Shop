@@ -69,7 +69,7 @@ class ProductItem extends HTMLElement {
     const style = document.createElement('style');
 
     style.textContent = `
-    price {
+    .price {
       color: green;
       font-size: 1.8em;
       font-weight: bold;
