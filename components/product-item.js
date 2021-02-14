@@ -1,5 +1,5 @@
 // product-item.js
-let cacheArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let cacheArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 class ProductItem extends HTMLElement {
   // TODO
   constructor(imgSrc, title, price, buttonMessage, index) {
@@ -52,6 +52,7 @@ class ProductItem extends HTMLElement {
         console.log(cacheArray);
 
         localStorage.setItem('cachedProducts', JSON.stringify(cacheArray));
+        localStorage.setItem('cartCount', cartCount.textContent);
       }
       else {
         button.textContent = 'Add to Cart';
@@ -61,6 +62,7 @@ class ProductItem extends HTMLElement {
         console.log(cacheArray);
         
         localStorage.setItem('cachedProducts', JSON.stringify(cacheArray));
+        localStorage.setItem('cartCount', cartCount.textContent);
       }
     }
 
